@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="flexrow">
+            <div class="fuki_col_12 fuki_row main-nav-wrapper">
+                <div> <img id="logo1" src="assets/logo.svg" alt="Logo 1" class="logo"></div>
+                <div class="toggle-button" onclick="changeAllLogos()"><img src="assets/noggle.svg" alt="Logo 1"
+                        class="noggle"></div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="fuki_col_12  main-nav-wrapper">
+            <div class="cloud-m"><img src="assets/clound-small.svg" alt="Logo 1" class="welcome-head"></div>
+                  <div class="fuki_col_6"><img src="assets/welcome-banner.svg" alt="Logo 1" class="welcome-head"></div>
+               <div class="fuki_col_6"><img src="assets/welcome-banner2.svg" alt="Logo 1" id="logo3" class="welcome-fuki"></div>
+
+                <div class="cloud-m2"><img src="assets/clound-small.svg" alt="Logo 1" class="welcome-head"></div>
+        </div> 
+
+        <div class="fuki_col_12" style="margin-top: 5%;">
+            <div class="fuki-block-header">Welcome to Fukin the Black Cloud </div>
+            <p> Welcome to our website, the home of Fukin, the lovable and quirky black cloud!</p>
+        </div> 
+    </section>
+     <section >
+       <div class="fuki_col_12  main-nav-wrapper" style="margin: 5% 0%;">
+         <div class="fuki_col_4 fuki-flex">
+            <div class="fuki-block1">
+              <img src="assets/fukin.png" alt="fukin" id="noggle1" class="fuki-images">
+         </div>
+          <div class="fuki-block-w">
+           <h1 style="text-transform: uppercase; font-family:'Londrina Solid', 'sans-serif';"> fu-kin<h1> 
+         </div>
+        </div>
+          <div class="fuki_col_4 fuki-flex"> 
+                <div class="fuki-block2">
+              <img src="assets/rabby.png" alt="rabby" id="noggle2" class="fuki-images">
+         </div>
+          <div class="fuki-block-w">
+              <h1 style="text-transform: uppercase; font-family:'Londrina Solid', 'sans-serif';">rabby<h1> 
+         </div>
+       </div>
+           <div class="fuki_col_4 fuki-flex"> 
+                   <div class="fuki-block3">
+              <img src="assets/choco.png"  alt="choco" id="noggle3" class="fuki-images">
+         </div>
+          <div class="fuki-block-w">
+              <h1 style="text-transform: uppercase; font-family:'Londrina Solid', 'sans-serif';">choco<h1> 
+         </div>
+           
+        </div>
+        </div> 
+    </section>
+    <section class="intro">
+
+    <div class="fuki_col_12  main-nav-wrapper">
+        <div class="fuki_col_6"> <img src="assets/fw1.gif" id="logo4" alt="Logo 1" class="welcome-head"></div>
+        <div class="fuki_col_6">
+            <div><img src="assets/who-fukin.svg" alt="Who is Fukin?" id="logo3" class="welcome-fuki"></div>
+
+            <p>
+                Fukin is not just any ordinary cloud. With a heart as vast as the sky, he brings a unique blend of
+                humor and
+                wisdom to every construction project he encounters. His adventures are filled with fun, challenges,
+                and
+                valuable lessons, making him a favorite among both kids and adults.
+            </p>
+        </div>
+    </div> 
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <!-- Carousel Container -->
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item"><img src="portfolio/captain-amiyoko.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="portfolio/coo-porp.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="portfolio/jack.jpg" alt="Image 3"></div>
+                <div class="carousel-item"><img src="portfolio/quackfamily.jpg" alt="Image 4"></div>
+            </div>
+            <button class="carousel-prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Responsive Website. All rights reserved.</p>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+    // JavaScript function to change all logos
+    function changeAllLogos() {
+
+        // Define pairs of logos to toggle
+        const logoPairs = [
+            { id: 'logo1', defaultLogo: 'assets/logo.svg', toggleLogo: 'assets/logo-noggle.svg' },
+            { id: 'logo2', defaultLogo: 'assets/logo2.svg', toggleLogo: 'assets/logo-noggle2.svg' },
+            { id: 'logo3', defaultLogo: 'assets/welcome-banner2.svg', toggleLogo: 'assets/welcome-banner2noggle.svg' },
+            { id: 'logo4', defaultLogo: 'assets/fw1.gif', toggleLogo: 'assets/fw1noggle.gif' },
+             { id: 'noggle1', defaultLogo: 'assets/fukin.png', toggleLogo: 'assets/fukinnoggle.png' },
+              { id: 'noggle2', defaultLogo: 'assets/rabby.png', toggleLogo: 'assets/rabbynoggle.png' },
+             { id: 'noggle3', defaultLogo: 'assets/choco.png', toggleLogo: 'assets/choconoggle.png' }
+        ];
+
+        // Loop through each logo pair and toggle the logo
+        // Loop through each logo pair and toggle the logo
+        logoPairs.forEach(({ id, defaultLogo, toggleLogo }) => {
+            const logo = document.getElementById(id);
+            if (logo) { // Ensure the logo element exists
+                // Check if the logo is currently displaying the defaultLogo
+                if (logo.src.includes(defaultLogo)) {
+                    logo.src = toggleLogo; // Change to the toggle logo
+                    logo.classList.add('active'); // Add 'active' class
+                } else {
+                    logo.src = defaultLogo; // Change back to the default logo
+                    logo.classList.remove('active'); // Remove 'active' class
+                }
+            }
+        });
+
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Function to toggle the active state of logos
+        function toggleLogoActiveState() {
+            const logos = document.querySelectorAll('.noggle');
+
+            logos.forEach(logo => {
+                logo.addEventListener('click', () => {
+                    // Toggle 'active' class on the clicked logo
+                    logo.classList.toggle('active');
+                });
+            });
+        }
+
+        // Initialize the logo toggle functionality
+        toggleLogoActiveState();
+    });
+</script>
+
+</html>
